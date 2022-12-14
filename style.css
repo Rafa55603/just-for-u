@@ -1,0 +1,46 @@
+body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #1C315E;
+}
+
+.heart {
+    height: 70px;
+    width: 70px;
+    background: #EB455F;
+    position: relative;
+    transform: rotate(-45deg);
+    box-shadow: -10px 10px 90px #EB455F;
+    animation: hati 0.6s linear infinite;
+}
+@keyframes hati {
+    0% {
+        transform: rotate(-45deg) scale(1.08);
+    }
+}
+.heart::before {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #EB455F;
+    top: -50%;
+    border-radius: 50px;
+    box-shadow: -10px -10px 90px #EB455F;
+    
+}
+
+.heart::after {
+    content: '';
+    position: absolute;
+    height: 70px;
+    width: 70px;
+    background: #EB455F;
+    right: -50%;
+    border-radius: 50px;
+    box-shadow: 10px 10px 90px #EB455F;
+}
